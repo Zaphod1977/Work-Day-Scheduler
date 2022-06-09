@@ -1,35 +1,43 @@
 $(document).ready(function () {
 
 
-    // daily planner to create a schedule
 
     // current day is displayed
     var date = new Date();
     $("#currentDay").text(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
     console.log(Date());
 
+
+
     // time blocks for standard hours
     $(".container").children().each(function () {
-        console.log(parseInt($(this).attr("id").replace("t" , "")))
-        console.log(date.getHours());
-        if (parseInt($(this).attr("id").replace("t" , "")) < date.getHours()) {
+
+        if (parseInt($(this).attr("id").replace("t", "")) < date.getHours()) {
             $(this).addClass("past")
         }
-        else if (parseInt($(this).attr("id").replace("t" , "")) == date.getHours()) {
+
+        else if (parseInt($(this).attr("id").replace("t", "")) == date.getHours()) {
             $(this).addClass("present")
         }
+
         else { $(this).addClass("future") }
     })
 
-    // click function in time block
+    // var div = document.getElementById('newText');
+    // var content = document.createTextNode("<YOUR_CONTENT>");
+    // newText.appendChild(content);
 
-    // enter event
+    // $( "#newText" ).append( "<p>Test</p>" );
 
-    // save button for entry
+    //Creates HTML elements for our planner's time rows
 
-    // entry is saved in local storage
+    // Variables for each 'create element'
 
-    // saved events persist
+    var saveTasks = function () {
+        localStorage.setItem("tasks", JSON.stringify(tasks));
+      };
+      
+
 
 
 
