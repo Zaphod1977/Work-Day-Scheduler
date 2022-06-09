@@ -1,13 +1,21 @@
 $(document).ready(function () {
 
-    // testing with no avail
-    console.log(localStorage.getItem("09"));
-
+    // reload data after refresh
+    $("#nine").append(localStorage.getItem("09"));
+    $("#ten").append(localStorage.getItem("10"));
+    $("#eleven").append(localStorage.getItem("11"));
+    $("#twelve").append(localStorage.getItem("12"));
+    $("#thirteen").append(localStorage.getItem("13"));
+    $("#fourteen").append(localStorage.getItem("14"));
+    $("#fifteen").append(localStorage.getItem("15"));
+    $("#sixteen").append(localStorage.getItem("16"));
+    $("#seventeen").append(localStorage.getItem("17"));
+    // reload data end
 
     // current day is displayed
     var date = new Date();
     $("#currentDay").text(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
-    // console.log(Date());
+
 
     // time blocks for standard hours
     $(".container").children().each(function () {
@@ -32,8 +40,9 @@ $(document).ready(function () {
     var saveTasks9 = function () {
         var nineValue = $("#nine").val();
         localStorage.setItem("09", JSON.stringify(nineValue));
-        console.log(localStorage.getItem("09"))
-        
+        console.log(localStorage.getItem("09"));
+
+
     };
     // 10am
     $('#sb10').click(function () {
@@ -99,7 +108,4 @@ $(document).ready(function () {
         var seventeenValue = $("#seventeen").val();
         localStorage.setItem("17", JSON.stringify(seventeenValue));
     };
-
-   
-
 });
