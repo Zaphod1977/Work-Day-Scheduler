@@ -23,22 +23,24 @@ $(document).ready(function () {
         else { $(this).addClass("future") }
     })
 
-    // var div = document.getElementById('newText');
-    // var content = document.createTextNode("<YOUR_CONTENT>");
-    // newText.appendChild(content);
+    //  click event to enter text data to time-block div
+    //  save that entered data w/json technique
 
-    // $( "#newText" ).append( "<p>Test</p>" );
+    $('#sb9').click(function () {
+        saveTasks9();
+    });
+    var saveTasks9 = function () {
+        var nineValue = $("#nine").val();
+        localStorage.setItem(this, JSON.stringify(nineValue));
+    };
 
-    //Creates HTML elements for our planner's time rows
-
-    // Variables for each 'create element'
-
-    var saveTasks = function () {
-        localStorage.setItem("tasks", JSON.stringify(tasks));
-      };
-      
-
-
+    $('#sb10').click(function () {
+        saveTasks10();
+    });
+    var saveTasks10 = function () {
+        var tenValue = $("#ten").val();
+        localStorage.setItem(this, JSON.stringify(tenValue));
+    };
 
 
 
