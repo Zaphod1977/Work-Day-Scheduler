@@ -40,9 +40,6 @@ $(document).ready(function () {
     var saveTasks9 = function () {
         var nineValue = $("#nine").val();
         localStorage.setItem("09", JSON.stringify(nineValue));
-        console.log(localStorage.getItem("09"));
-
-
     };
     // 10am
     $('#sb10').click(function () {
@@ -108,4 +105,5 @@ $(document).ready(function () {
         var seventeenValue = $("#seventeen").val();
         localStorage.setItem("17", JSON.stringify(seventeenValue));
     };
+        // end data entry points for the individual rows as per time
 });
