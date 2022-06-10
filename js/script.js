@@ -14,8 +14,7 @@ $(document).ready(function () {
 
     // current day is displayed
     var date = new Date();
-    $("#currentDay").text(date.getDate() + "/" + date.getMonth() + "/" + date.getFullYear());
-
+    $("#currentDay").text(moment().format('MMMM Do YYYY'));
 
     // time blocks for standard hours
     $(".container").children().each(function () {
